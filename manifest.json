@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "图片爬取器",
+  "version": "1.0",
+  "description": "爬取并复制网页图片",
+  "permissions": [
+    "activeTab",
+    "clipboardWrite"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
